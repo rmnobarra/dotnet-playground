@@ -1,0 +1,27 @@
+@model IEnumerable<TodoListApp.Models.TodoItem>
+
+<h2>Lista de Tarefas</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Concluída</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.IsCompleted</td>
+                <td>
+                    @Html.ActionLink("Remover", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>@Html.ActionLink("Adicionar Nova Tarefa", "Create")</p>
