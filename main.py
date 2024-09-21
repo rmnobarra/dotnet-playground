@@ -271,7 +271,7 @@ def create_branch_and_commit(repo_dir, branch_name, file_to_commit, commit_messa
     parent = repo.revparse_single('HEAD')
     commit = repo.create_commit(
         'refs/heads/' + branch_name,  # Branch onde será feito o commit
-        author, committer, commit_message, tree, [parent.oid]
+        author, committer, commit_message, tree, [parent.id]
     )
     print(f'Commit criado na branch {branch_name} com o arquivo {file_to_commit}')
 
