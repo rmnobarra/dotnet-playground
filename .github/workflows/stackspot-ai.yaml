@@ -1,4 +1,4 @@
-name: Executar Script Python
+name: Stackspot AI
 
 on:
   workflow_dispatch:
