@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoard.API", "MessageBoard.API\MessageBoard.API.csproj", "{FEDCBA98-7654-3210-FEDC-BA9876543210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoard.Data", "MessageBoard.Data\MessageBoard.Data.csproj", "{A1234567-89AB-CDEF-0123-456789ABCDEF}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {GUID-PROJ-API}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {GUID-PROJ-API}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {GUID-PROJ-API}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {GUID-PROJ-API}.Release|Any CPU.Build.0 = Release|Any CPU
+        {GUID-PROJ-DATA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {GUID-PROJ-DATA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {GUID-PROJ-DATA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {GUID-PROJ-DATA}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+EndGlobal

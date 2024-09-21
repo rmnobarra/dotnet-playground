@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEDCBA98-7654-3210-FEDC-BA9876543210}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MessageBoard.API</RootNamespace>
+    <AssemblyName>MessageBoard.API</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http" />
+    <Reference Include="Newtonsoft.Json" />
+    <ProjectReference Include="..\MessageBoard.Data\MessageBoard.Data.csproj">
+      <Project>{A1234567-89AB-CDEF-0123-456789ABCDEF}</Project>
+      <Name>MessageBoard.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

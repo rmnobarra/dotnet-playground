@@ -1,0 +1,13 @@
+<Window x:Class="SimplePaintApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simple Paint" Height="600" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Name="btnLine" Click="btnLine_Click">Line</Button>
+            <Button Name="btnRectangle" Click="btnRectangle_Click">Rectangle</Button>
+            <Button Name="btnEllipse" Click="btnEllipse_Click">Ellipse</Button>
+        </ToolBar>
+        <Canvas Name="drawingCanvas" Background="White" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="Canvas_MouseMove" MouseLeftButtonUp="Canvas_MouseLeftButtonUp"/>
+    </DockPanel>
+</Window>

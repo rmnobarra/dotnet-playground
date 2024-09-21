@@ -1,0 +1,31 @@
+@model List<TaskManager.Data.Models.Task>
+
+@{
+    ViewBag.Title = "Lista de Tarefas";
+}
+
+<h2>Lista de Tarefas</h2>
+
+<p>
+    @Html.ActionLink("Criar Nova Tarefa", "Create")
+</p>
+
+<table>
+    <tr>
+        <th>Título</th>
+        <th>Descrição</th>
+        <th>Concluída</th>
+        <th>Ações</th>
+    </tr>
+    @foreach (var task in Model)
+    {
+        <tr>
+            <td>@task.Title</td>
+            <td>@task.Description</td>
+            <td>@task.IsCompleted</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = task.Id })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,4 @@
+requests
+pygit2
+fnmatch
+shutil
