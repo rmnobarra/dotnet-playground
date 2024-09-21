@@ -8,7 +8,7 @@ import shutil
 import pygit2
 
 # Configurações
-GITHUB_TOKEN = os.environ['GH_TOKEN']
+GH_TOKEN = os.environ['GH_TOKEN']
 REPO_URL = 'https://github.com/rmnobarra/dotnet-playground'
 WORK_DIR = './workdir'
 MODERNIZATOR_DIR = os.path.join(WORK_DIR, 'modernizator')  # Diretório onde será criada a estrutura
@@ -277,7 +277,7 @@ def create_branch_and_commit(repo_dir, branch_name, file_to_commit, commit_messa
 
     # Fazer o push da nova branch para o repositório remoto
     remote = repo.remotes['origin']
-    remote.credentials = pygit2.UserPass(GITHUB_TOKEN, '')
+    remote.credentials = pygit2.UserPass(GH_TOKEN, '')
     remote.push([f'refs/heads/{branch_name}'])
     print(f'Branch {branch_name} enviada para o repositório remoto.')
 
@@ -297,7 +297,7 @@ def main():
     clone_dir = os.path.join(WORK_DIR, 'repo_clone')
 
     # Clonar o repositório
-    clone_repo(REPO_URL, clone_dir, GITHUB_TOKEN)
+    clone_repo(REPO_URL, clone_dir, GH_TOKEN)
     
     # Lê os padrões do .gitignore
     ignored_patterns = read_gitignore(clone_dir)
