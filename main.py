@@ -328,7 +328,7 @@ def main():
 
         # Copiar o arquivo markdown para o repositório clonado
         if copy_markdown_to_repo(markdown_file, repo_markdown_dir):
-            branch_name = 'modernizacao-plano'
+            branch_name = 'feature/plano-de-modernizacao'
             commit_message = 'Adicionando plano de modernização gerado automaticamente'
             create_branch_and_commit(clone_dir, branch_name, os.path.join('modernizator', 'plano_de_modernizacao.md'), commit_message)
 
